@@ -1,0 +1,193 @@
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Rock+Salt&display=swap');
+
+/* Defining CSS Variables in :root */
+:root {
+  --primary-color: #2A9D8F;
+  --secondary-color: #E9C46A;
+  --accent1-color: #F4A261;
+  --accent2-color: white;
+
+  --heading-font: "Arya", sans-serif;
+  --paragraph-font: "Fugaz One", sans-serif;
+
+  --headline-color-on-white: #396E94;
+  --headline-color-on-color: rgb(31, 161, 141);
+  --paragraph-color-on-white: #396E94;
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: #ffb700;
+
+  --nav-link-color: #2A9D8F;
+  --nav-background-color: #F4A261;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #E9C46A;
+}
+
+/* General Styles */
+body {
+  background-color: #fcfbfb;
+  font-family: var(--paragraph-font), Arial, sans-serif;
+  font-size: 22px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4em;
+  text-align: center;
+}
+
+/* Headline Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+
+/* Home Title Styling */
+.home-title {
+  font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+/* Paragraph Styles */
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+/* Navigation Bar Styling */
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  padding: 35px 10px;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+/* Card and Button Styles */
+.book, .join {
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  background-color: #d9c2a3;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card-img {
+  border: 10px solid #d9c2a3;
+}
+
+/* Specific Sections */
+.msg {
+  background-color: #6f7364;
+  padding: 35px;
+}
+
+.msg p {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+}
+
+/* Logo and Icon Padding */
+#logo_link {
+  padding-top: 5px;
+}
+
+.icon {
+  padding-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+  padding: 25px 50px;
+  margin-top: 200px;
+}
+
+footer .social img {
+  padding-top: 15px;
+}
+
+/* Color Table */
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.colors th {
+  background-color: #999;
+}
+
+.colors td {
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+}
+
+.accent1 {
+  background-color: var(--accent1-color);
+}
+
+.accent2 {
+  background-color: var(--accent2-color);
+}
+
+/* Sitemap */
+.sitemap {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+                        ". . . top . ."
+                        ". left left right right ."
+                        "page2 page2 . . page3 page3";
+}
+
+.sitemap > div {
+  text-align: center;
+}
+
+.sm-home, .sm-page2, .sm-page3 {
+  background-color: #ccc;
+  line-height: 3em;
+}
