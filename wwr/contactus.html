@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hero img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 1em;
+        }
+        h3 {
+            color: #006400;
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .rates-photos {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .rates-photos img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Form</h2>
+        <div id="feedback"></div>
+        <script>
+            // get the feedback div element so we can do something with it.
+            const feedbackElement = document.getElementById('feedback');
+            // get the form so we can read what was entered in it.
+            const formElement = document.forms[0];
+            // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+            formElement.addEventListener('submit', function(e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            });
+        </script>
+        <form action="/my-handling-form-page" method="post">…
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+              </p>
+              <p>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+              </p>
+              <p>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </p>
+              <input type="text" value="Review Form is Accurate" />
+              <p class="button">
+                <button type="submit">Submit Form</button>
+              </p>
+        </form>
+        
+    </div>
+
+</body>
+</html>
